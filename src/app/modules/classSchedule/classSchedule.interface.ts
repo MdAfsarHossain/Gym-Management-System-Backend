@@ -5,5 +5,5 @@ export interface IClassSchedule {
   startTime: Date;
   endTime?: Date;
   trainerId: Types.ObjectId | string;
-  bookedBy: Types.ObjectId;
+  bookedBy: [];
 }
