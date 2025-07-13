@@ -61,9 +61,81 @@ ADMIN_PASSWORD= <admin_pass>
 npm run dev
 ```
 
-## [LIVE HOSTING LINK]()
+## [ALL SCHEMA]()
 
-- <a href="https://gym-management-system-backend.vercel.app">Live Server Link</a>
+### 1. User Schema
+
+```ts
+const userSchema = new Schema<IUser>(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      enum: Object.values(Role),
+      default: Role.TRAINEE,
+    },
+  },
+  { timestamps: true, versionKey: false }
+);
+```
+
+### 2. Profile Schema
+
+```ts
+const profileSchema = new Schema<IProfile>(
+  {
+    user: {},
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    phone: { type: String },
+    address: { type: String, required: true },
+  },
+  { timestamps: true, versionKey: false }
+);
+```
+
+### 3. Class Schedule Schema
+
+```ts
+const classScheduleSchema = new Schema<IClassSchedule>(
+  {
+    title: { type: String, required: true },
+    startTime: { type: Date, required: true },
+    endTime: { type: Date, required: true },
+    trainerId: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    bookedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  },
+  { timestamps: true, versionKey: false }
+);
+```
+
+### 4. Booking Schema
+
+```ts
+const bookingSchema = new Schema<IBookingCreate>(
+  {
+    classId: {
+      type: Schema.Types.ObjectId,
+      ref: "ClassSchedule",
+      required: true,
+    },
+    traineeId: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  },
+  { timestamps: true, versionKey: false }
+);
+```
 
 ## [API DOCUMENTATION]()
 
@@ -181,3 +253,7 @@ Import the provided Postman collection for all endpoints and example requests/re
 ## [ER DIAGRAM]()
 
 <a href="https://drive.google.com/file/d/1B3qVvk9NgkiRajeupF82ofPIphnesdK2/view?usp=sharing" target="_blank">ER Diagram Link</a>
+
+## [LIVE HOSTING LINK]()
+
+- <a href="https://gym-management-system-backend.vercel.app">Live Server Link</a>
