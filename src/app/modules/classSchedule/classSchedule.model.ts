@@ -3,7 +3,6 @@ import { IClassSchedule } from "./classSchedule.interface";
 
 // models/classSchedule.js
 const classScheduleSchema = new Schema<IClassSchedule>(
-  // const classScheduleSchema = new Schema(
   {
     title: { type: String, required: true },
     startTime: { type: Date, required: true },
