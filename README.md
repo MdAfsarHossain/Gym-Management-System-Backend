@@ -177,3 +177,7 @@ Authorization: Bearer <token>
 <a href="https://documenter.getpostman.com/view/17765698/2sB34foMZv">Postman Documentation Live Link</a>
 
 Import the provided Postman collection for all endpoints and example requests/responses.
+
+## [ER DIAGRAM]()
+
+<a href="https://drive.google.com/file/d/1B3qVvk9NgkiRajeupF82ofPIphnesdK2/view?usp=sharing" target="_blank">ER Diagram Link</a>
