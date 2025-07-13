@@ -1,9 +1,6 @@
 import { Types } from "mongoose";
 
 export interface IClassSchedule {
-  // startTime: Date;
-  // trainerId: Types.ObjectId;
-  // trainees: Types.ObjectId;
   title: string;
   startTime: Date;
   endTime?: Date;
