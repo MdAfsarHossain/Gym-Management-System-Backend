@@ -13,13 +13,6 @@ const credentialsLogin = catchAsync(
     //     secure: false
     // })
 
-    // res.cookie("refreshToken", loginInfo.refreshToken, {
-    //     httpOnly: true,
-    //     secure: false,
-    // })
-
-    // setAuthCookie(res, loginInfo);
-
     sendResponse(res, {
       success: true,
       statusCode: httpStatus.OK,
