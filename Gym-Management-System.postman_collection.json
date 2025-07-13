@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "1c1f6470-0d50-48be-b01f-9b0621aaf68c",
+		"name": "Gym-Management-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17765698"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"name\": \"Afsar Hossain\",\r\n    // \"email\": \"afsar@gmail.com\",\r\n    // \"name\": \"Anwar Hossain\",\r\n    // \"email\": \"anwar@gmail.com\",\r\n    // \"name\": \"Tarek Hossain\",\r\n    // \"email\": \"tarek-hossen@gmail.com\"\r\n    // \"name\": \"Rohim Hossain\",\r\n    // \"email\": \"rohim@gmail.com\",\r\n    // \"password\": \"A123456&\"\r\n    // \"role\": \"TRAINEE\"\r\n    \"role\": \"TRAINER\"\r\n    // \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/68734d940a1616fbce01ecf6",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"68734d940a1616fbce01ecf6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afsar Hossain-1\",\r\n    \"email\": \"afsar1@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/all-users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Class Schedule",
+			"item": [
+				{
+					"name": "Create Class Schedule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startTime\": \"2025-07-13T10:00:00Z\",\r\n//   \"endTime\": \"2024-03-19T12:00:00Z\",\r\n  \"trainerId\": \"68734d940a1616fbce01ecf6\",\r\n  \"title\": \"Test Gym\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/class-schedule/create-schedule",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"class-schedule",
+								"create-schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Specific Trainer Class Schedule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afsar Hossain-1\",\r\n    \"email\": \"afsar1@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/class-schedule/68734d940a1616fbce01ecf6",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"class-schedule",
+								"68734d940a1616fbce01ecf6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Class Schedule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afsar Hossain-1\",\r\n    \"email\": \"afsar1@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/class-schedule/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"class-schedule",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcyYTgyYWY3N2NhOGJkZDM1OTU0YjgiLCJlbWFpbCI6InRhcmVrMTJAZ21haWwuY29tIiwicm9sZSI6IlRSQUlORUUiLCJpYXQiOjE3NTIzODc2NzAsImV4cCI6MTc1MjQ3NDA3MH0.ccULFWsr35FmJYqEmLP_IQlRKMSmxWl3GcnwkP3zr10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"traineeId\": \"6872a82af77ca8bdd35954b8\",\r\n    \"classId\": \"68734eff0a1616fbce01ed15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/booking/create-booking",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"create-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcyYTgyYWY3N2NhOGJkZDM1OTU0YjgiLCJlbWFpbCI6InRhcmVrMTJAZ21haWwuY29tIiwicm9sZSI6IlRSQUlORUUiLCJpYXQiOjE3NTIzODc2NzAsImV4cCI6MTc1MjQ3NDA3MH0.ccULFWsr35FmJYqEmLP_IQlRKMSmxWl3GcnwkP3zr10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"bookingId\": \"6872a8a9f77ca8bdd35954eb\"\r\n    \"traineeId\": \"6872a82af77ca8bdd35954b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/booking/cancel-booking/687350600a1616fbce01ed3d",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"cancel-booking",
+								"687350600a1616fbce01ed3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/booking/all-bookings",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"all-bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trainners",
+			"item": [
+				{
+					"name": "Create Trainner",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"TRAINER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/68734d940a1616fbce01ecf6",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"68734d940a1616fbce01ecf6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Trainners",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afsar Hossain-1\",\r\n    \"email\": \"afsar1@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/all-trainers",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"all-trainers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Trainer to a Class Schedule",
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Create New Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcyYTgyYWY3N2NhOGJkZDM1OTU0YjgiLCJlbWFpbCI6InRhcmVrMTJAZ21haWwuY29tIiwicm9sZSI6IlRSQUlORUUiLCJpYXQiOjE3NTIzODc2NzAsImV4cCI6MTc1MjQ3NDA3MH0.ccULFWsr35FmJYqEmLP_IQlRKMSmxWl3GcnwkP3zr10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Smith\",\r\n    \"phone\": \"+1234567890\",\r\n    \"address\": \"CTG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/profile/687351610a1616fbce01ed49",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"687351610a1616fbce01ed49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Profiles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODczM2QwMDBhZGE2ZGU5YTYzMWU3NzciLCJlbWFpbCI6ImFmc2FyLWhvc3NhaW5AZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUyMzg3MDk4LCJleHAiOjE3NTI0NzM0OTh9.XBnLYFpR0KO4J49ZszfW3gIKaWY-XIu0yO_Mwm6_e0s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/profile/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcyYTgyYWY3N2NhOGJkZDM1OTU0YjgiLCJlbWFpbCI6InRhcmVrMTJAZ21haWwuY29tIiwicm9sZSI6IlRSQUlORUUiLCJpYXQiOjE3NTIzODc2NzAsImV4cCI6MTc1MjQ3NDA3MH0.ccULFWsr35FmJYqEmLP_IQlRKMSmxWl3GcnwkP3zr10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\": \"KHAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/profile/687351900a1616fbce01ed4e",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"687351900a1616fbce01ed4e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // Admin\r\n    // \"email\": \"afsar-hossain@gmail.com\",\r\n    // \"password\": \"Afsar12345#\"\r\n    // \"email\": \"testuser@gmail.com\",\r\n    \"email\": \"tarek12@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"name\": \"Admin Vai\",\r\n    // \"email\": \"afsar-hossain@gmail.com\",\r\n    // \"password\": \"Afsar12345#\",\r\n    // \"role\": \"ADMIN\"\r\n    // \"name\": \"Afsar Hossain\",\r\n    // \"email\": \"afsar@gmail.com\",\r\n    // \"name\": \"Anwar Hossain\",\r\n    // \"email\": \"anwar@gmail.com\",\r\n    // \"name\": \"Tarek Hossain-12\",\r\n    // \"email\": \"tarek12@gmail.com\",\r\n    // \"name\": \"Rohim Hossain\",\r\n    // \"email\": \"rohim@gmail.com\",\r\n    \"name\": \"Test Trainee User\",\r\n    \"email\": \"test-trainee-user@gmail.com\",\r\n    \"password\": \"A123456&\"\r\n    // \"role\": \"TRAINEE\"\r\n    // \"role\": \"TRAINER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://gym-management-system-backend.vercel.app",
+			"type": "string"
+		}
+	]
+}
